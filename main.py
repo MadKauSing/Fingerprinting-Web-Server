@@ -13,7 +13,7 @@ def fingerprint_web_server(argv):
             result = req.headers[header]
             print('%s: %s' % (header, result))
         except Exception as error:
-            continue
+            print("%s : Not found"%(header))
     for header in req.headers:
         result = req.headers[header]
         if(header.startswith('X-') or header.startswith('x-')):
